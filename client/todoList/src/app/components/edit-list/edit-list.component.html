@@ -1,0 +1,31 @@
+<h1>Edit Your List</h1>
+
+<form [formGroup]="form" (ngSubmit)="updateTodo()">
+  <table>
+    <tr>
+      <td>Title: </td>
+      <td><input type="text" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Task Description: </td>
+      <td><textarea name="" id="" cols="30" rows="10"  formControlName="taskDescription"></textarea></td>
+    </tr>
+    <tr>
+      <select id="priority" formControlName="priority">
+        <option value="low">low</option>
+        <option value="med">med</option>
+        <option value="high">high</option>
+      </select>
+    </tr>
+  </table>
+  <button type="submit">Update</button>
+  <button type="button">Delete</button>
+  <button type="button" [routerLink]="['']">BACK</button>
+</form>
+<hr>
+{{todo.title}}
+<br>
+{{todo.taskDescription}}
+<br>
+{{todo.priority}}
+

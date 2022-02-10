@@ -1,0 +1,26 @@
+<h1>Add Your TODO</h1>
+
+<form [formGroup]="form" (ngSubmit)="submitTODO()">
+  <table>
+    <tr>
+      <td>Title: </td>
+      <td><input type="text" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Task Description: </td>
+      <td><textarea name="" id="" cols="30" rows="10"  formControlName="taskDescription"></textarea></td>
+    </tr>
+    <tr>
+      <select id="priority" formControlName="priority">
+        <option value="low">low</option>
+        <option value="med">med</option>
+        <option value="high">high</option>
+      </select>
+    </tr>
+  </table>
+  <div>
+    <button type="submit">ADD</button>
+    <button type="button" [routerLink]="['/']">BACK</button>
+  </div>
+</form>
+<hr>

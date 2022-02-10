@@ -1,0 +1,8 @@
+<h1>List of TODOS</h1>
+
+<table>
+  <tr *ngFor="let todo of todoSummary">
+    <td class="listSelection" [routerLink]="['/editList', todo.taskId]">Title: {{todo.title}}</td>
+  </tr>
+</table>
+<button type="button" [routerLink]="['/addList']">Add New TODO</button>

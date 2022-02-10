@@ -1,0 +1,15 @@
+.listSelection {
+  margin: 15px;
+  padding: 10px;
+  font-size: 2em;
+  border: 1px grey solid;
+  transition-duration: 300ms;
+  transition-property: background-color, border, border-radius;
+  transition-timing-function: linear;
+}
+
+.listSelection:hover {
+  border-radius: 12px;
+  background-color: rgb(160, 144, 144);
+  border: black 1px solid;
+}
