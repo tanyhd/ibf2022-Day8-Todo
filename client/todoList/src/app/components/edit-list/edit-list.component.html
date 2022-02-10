@@ -10,13 +10,14 @@
       <td>Task Description: </td>
       <td><textarea name="" id="" cols="30" rows="10"  formControlName="taskDescription"></textarea></td>
     </tr>
-    <tr>
+    <td>Priority</td>
+    <td>
       <select id="priority" formControlName="priority">
-        <option value="low">low</option>
-        <option value="med">med</option>
-        <option value="high">high</option>
+        <option value="low">Low</option>
+        <option value="med">Medium</option>
+        <option value="high">High </option>
       </select>
-    </tr>
+    </td>
   </table>
   <button type="submit">Update</button>
   <button type="button" (click)="deleteTodo()">Delete</button>
