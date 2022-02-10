@@ -19,13 +19,9 @@
     </tr>
   </table>
   <button type="submit">Update</button>
-  <button type="button">Delete</button>
+  <button type="button" (click)="deleteTodo()">Delete</button>
   <button type="button" [routerLink]="['']">BACK</button>
 </form>
 <hr>
-{{todo.title}}
-<br>
-{{todo.taskDescription}}
-<br>
-{{todo.priority}}
+<div hidden>{{todo.title}}</div>
 

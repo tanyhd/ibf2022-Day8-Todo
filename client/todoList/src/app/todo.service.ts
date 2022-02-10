@@ -30,4 +30,12 @@ export class TodoService extends Dexie {
     return this.todo.get(taskId);
   }
 
+  updateTodo(todo: Todo): Promise<string> {
+    return this.todo.put(todo);
+  }
+
+  deleteTodo(taskId: string) {
+    return this.todo.delete(taskId);
+  }
+
 }

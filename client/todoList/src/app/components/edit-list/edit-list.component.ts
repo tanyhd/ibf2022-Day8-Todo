@@ -18,8 +18,8 @@ export class EditListComponent implements OnInit, AfterViewInit{
 
   constructor(private fb: FormBuilder, private todoService: TodoService, private activatedRoute: ActivatedRoute) { }
 
-  ngAfterViewInit(): void {
-    this.getTodo()
+  async ngAfterViewInit() {
+   await this.getTodo()
   }
 
 
@@ -41,10 +41,18 @@ export class EditListComponent implements OnInit, AfterViewInit{
     })
   }
 
-
-
   updateTodo() {
+    this.todo.priority = this.form.value.priority;
+    this.todo.taskDescription = this.form.value.taskDescription;
+    this.todo.title = this.form.value.title;
+    this.todoService.updateTodo(this.todo);
+    console.log(this.todo);
+    this.form.reset();
+  }
 
+  deleteTodo() {
+    this.todoService.deleteTodo(this.todo.taskId)
+    this.form.reset();
   }
 
 }
